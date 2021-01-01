@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="E:\Lab P.2\CS313 พัฒนาเว็ป(จารย์โจ)\bootstrap-5.0.0-beta1-dist\css\bootstrap.css">
+    <title>ฟอร์มลาพักการศีกษา</title>
+</head>
+
+<body>
+    <div class="p-3 container" style="background-color: rgb(4, 131, 0);">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" style="background-color: #eee;"
+                    href="Form.html">นักศึกษา</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="Form2.html">ผู้ปกครอง</a>
+            </li>
+        </ul>
+        <div class="w-100 p-3 container" style="background-color: #eee;">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/th/4/43/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B9%82%E0%B8%88%E0%B9%89_edit.png"
+                            class="rounded float-start img-fluid" width="100" height="100">
+                    </div>
+                    <div class="col-sm">
+                        <h4 class="text-end">มจท. 10</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 class="text-center"><strong>คําร้องขอลาพักการศึกษา</strong></h3>
+                </div>
+            </div>
+            <p class="text-center">สําหรับนักศึกษาที่ได้ศึกษามาแล้ว ไม่น้อยกว่าหนึ่งภาคการศึกษา</p>
+            <div class="container">
+                <form action="" class="was-validated">
+                    <div class="row text-end">
+                        <p>วันที่ <input type="date" name="date" id="date" required></p>
+                    </div>
+                    <!-- <div class="row-sm text-center">
+                    Email <input type="email" name="mju-mail" pattern="mju\d{10}+@mju.ac.th" maxlength="23" size="23">
+                    <input type="submit" value="ตกลง">
+                    <br>เกรดเฉลี่ย <input type="number" name="gpa" id="gpa" step="0.01" min="0.00" max="4.00" required>
+                </div> -->
+                    <div class="row justify-content-end">
+                        <div class="col-11 mb-2 text-end">
+                            เขียนที่ มหาวิทยาลัยแม่โจ้
+                        </div>
+                        <div class="col-11 mb-1">
+                            <strong>เรื่อง </strong>ขอลาพักการศึกษา ในภาคเรียนที่
+                            <select class="select">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                            ปีการศึกษา
+                            <select class="select">
+                                <option>2563</option>
+                                <option>2564</option>
+                            </select>
+                        </div>
+                        <div class="col-11 mb-2">
+                            <strong>เรียน </strong>
+                            คณบดีคณะ <input class="text" size="30" pattern="[ก-๙]+" list="datalistOptions"
+                                placeholder="กรุณาเลือกคณะ" id="คณะ" required>
+                        </div>
+                        <div class="col-10 mb-2">
+                            ข้าพเจ้า
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label text-dark" for="inlineRadio1">นาย</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label text-dark" for="inlineRadio2">นาง</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option3">
+                                <label class="form-check-label text-dark" for="inlineRadio3">นางสาว</label>
+                            </div>
+                            ชื่อ
+                            <input type="text" pattern="[ก-๙]+" placeholder="กรุณาใส่ชื่อ" maxlength="20" required>
+                            นามสกุล
+                            <input type="text" pattern="[ก-๙]+" placeholder="กรุณาใส่นามสกุล" maxlength="20" required>
+                        </div>
+                        <div class="col-11 mb-2">
+                            รหัสนักศึกษา
+                            <input type="text" pattern="\d{10}" placeholder="(10หลัก)" maxlength="10" size="10"
+                                required>
+                            โทรศัพท์มือถือ
+                            <input type="text" pattern="\d{10}" placeholder="(10หลัก)" maxlength="10" size="10"
+                                required>
+                        </div>
+                        <div class="col-11 mb-2">
+                            หลักสูตร ปริญญาตรี
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                    value="option4">
+                                <label class="form-check-label text-dark" for="inlineRadio4">4–5ปี</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                                    value="option5">
+                                <label class="form-check-label text-dark"
+                                    for="inlineRadio5">4ปีเทียบเข้าเรียน(2ปี)</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
+                                    value="option6">
+                                <label class="form-check-label text-dark" for="inlineRadio6">ภาคปกติ</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7"
+                                    value="option7">
+                                <label class="form-check-label text-dark" for="inlineRadio7">ภาคสมทบ</label>
+                            </div>
+                        </div>
+                        <div class="col-11 mb-2">
+                            คณะ <input class="text" size="30" pattern="[ก-๙]+" list="datalistOptions"
+                                placeholder="กรุณาเลือกคณะ" id="คณะ" required>
+                            สาขา <input class="text" size="30" pattern="[ก-๙]+" placeholder="กรุณากรอกสาขา" id="สาขา"
+                                required>
+                        </div>
+                        <div class="col-11 mb-1">
+                            มีความประสงค์จะขอลาพักการศึกษา เนื่องจาก
+                        </div>
+                        <div class="col-11 mb-2">
+                            <textarea pattern="[ก-๙]+" placeholder="หมายหตุ" id="สาเหตุ" cols="33" rows="4"
+                                required></textarea>
+                        </div>
+                        <div class="col-11 mb-2">
+                            พร้อมนี้ได้แนบใบยินยอมขอลาพักการศึกษาจาก
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8"
+                                    value="option8">
+                                <label class="form-check-label text-dark" for="inlineRadio8">ผู้ปกครอง</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio9"
+                                    value="option9">
+                                <label class="form-check-label text-dark" for="inlineRadio9">ใบรับรองแพทย์</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                    id="inlineRadio10" value="option10">
+                                <label class="form-check-label text-dark" for="inlineRadio10">เอกสารอื่นๆ</label>
+                            </div>
+                        </div>
+                        <div class="row-sm text-center">
+                            <button class="btn-primary" type="submit">ยืนยัน</button>
+                            <button class="btn-danger" type="cancel">ยกเลิก</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- คณะ -->
+<datalist id="datalistOptions">
+    <option value="บริหารธุรกิจ">
+    <option value="ผลิตกรรมการเกษตร">
+    <option value="วิทยาศาสตร์">
+    <option value="วิศวกรรมและอุตสาหกรรมเกษตร">
+    <option value="เทคโนโลยีการประมงและทรัพยากรทางน้ำ">
+    <option value="พัฒนาการท่องเที่ยว">
+    <option value="ศิลปศาสตร์">
+    <option value="เศรษฐศาสตร์">
+    <option value="สถาปัตยกรรมศาสตร์ และการออกแบบสิ่งแวดล้อม">
+    <option value="สัตวศาสตร์และเทคโนโลยี">
+    <option value="สารสนเทศและการสื่อสาร">
+</datalist>
+
+</html>
